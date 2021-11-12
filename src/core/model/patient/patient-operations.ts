@@ -17,7 +17,7 @@ export class PatientOperations {
       priority = this.AdultsPriority(diet, age);
     }
 
-    return priority;
+    return Math.round(priority);
   }
 
   private ChildPriority(age: number, weightHeight: number): number {
@@ -48,11 +48,11 @@ export class PatientOperations {
     if (age >= 41) {
       risk = (age * priority) / (100 + 5.3);
     }
-    return risk;
+    return Math.round(risk);
   }
   CalculateWeightHeightRatio(weight: number, height: number): number {
     let h = height / 100;
     let ratio = weight / (h * h);
-    return ratio;
+    return Math.round(ratio) ;
   }
 }

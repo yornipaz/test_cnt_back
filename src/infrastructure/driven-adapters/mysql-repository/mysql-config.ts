@@ -5,12 +5,12 @@ import { PatientData } from './patient/tbl_patient';
 dotenv.config();
 export const sequelize = new Sequelize({
     dialect: 'mysql',
-    database: 'db_cnt_test',
-    host: 'localhost',
-    port: 3306,
-    username: 'root',
-    password: 'Upb2021@*',
-    timezone: '-05:00',
+    database: process.env.DB_DATABASE,
+    host:process.env.DB_HOST,
+    port:parseInt(process.env.DB_PORT!),
+    username:process.env.DB_USERNAME ,
+    password:process.env.DB_PASSWORD,
+    timezone:'-05:00',
     models: [PatientData],
     logging: false
 });
