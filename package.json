@@ -1,0 +1,34 @@
+{
+  "name": "test_cnt",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "tsc && node --unhandled-rejections=strict ./dist/app/app.js",
+    "dev": "tsc-watch  --onSuccess \"node ./dist/app/app.js\"",
+    "debug": "export DEBUG=* && npm run start",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "debug": "^4.3.2",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "express-winston": "^4.2.0",
+    "morgan": "^1.10.0",
+    "mysql2": "^2.3.3-rc.0",
+    "sequelize-typescript": "^2.1.1",
+    "winston": "^3.3.3"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.12",
+    "@types/debug": "^4.1.7",
+    "@types/express": "^4.17.13",
+    "@types/morgan": "^1.9.3",
+    "tsc-watch": "^4.5.0",
+    "typescript": "^4.4.4"
+  }
+}
